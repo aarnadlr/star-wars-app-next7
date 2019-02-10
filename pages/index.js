@@ -7,31 +7,45 @@ import { characters } from '../src/characters.json';
 import Movie from "../components/Movie";
 import MovieList from "../components/MovieList";
 import fetch from "isomorphic-fetch"
-
+import Router from 'next/router'
+// import SwLogo from '../components/SwLogo';
+import "tachyons/css/tachyons.css";
 
 export default class extends Component {
   state = {
     characterData: ''
   }
+
+  handleErrors = (response) => {
+    if (!response.ok) {
+      Router.push('/error');
+      throw Error(response.statusText);
+    }
+    return response.json();
+  }
   
   onSubmit = (url) => {
     fetch(url)
-      .then(response => response.json())
-      .then(json => {
-        console.log(json);
-        this.setState({
-          characterData: json
-        })
+    .then(this.handleErrors)
+    .then(json => {
+      console.log("ok", json)
+      this.setState({
+        characterData: json
       })
+    } )
+    .catch(error => {
+      console.log(error);
+    });
   }
 
   render() {
     return (
 
-      <main>
+      <main className="bg-black gray ">
 
+        
         <Header />
-
+      
         {/* CHARACTER BUTTONS */}
         {
           characters.map((item, index) => (
@@ -49,7 +63,9 @@ export default class extends Component {
           :
           null
         }
-
+      <style jsx>{`
+        
+    `}</style>
       </main>
     )
 
