@@ -24,7 +24,7 @@ export default class extends Component {
     fetch(url)
     .then(this.handleErrors)
     .then(json => {
-      console.log("ok", json)
+      // console.log("ok", json)
       this.setState({
         characterData: json
       })
@@ -59,8 +59,8 @@ export default class extends Component {
           ?
             this.state.characterData.films.map((item, index)=>(
               <div key={index} className="tc">
-              <p className="white">{this.state.characterData.name} appeared in:</p>
-              <div  className="film-wrapper b--red">
+              <p className="white">{this.state.characterData.name} appears in:</p>
+              <div  className="film-wrapper">
                 <Movie titleURL={item} />
               </div>
               </div>
