@@ -12,7 +12,7 @@ export default function Error() {
 
           <h1 className=" tc f1 fw8">4</h1>
           
-          <img src="./static/death-star.jpg" alt="death-star" />
+          <img src="/static/death-star.jpg" alt="death-star" />
           <h1 className=" tc f1 fw8">4</h1>
 
         </div>
