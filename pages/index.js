@@ -21,16 +21,23 @@ export default class extends Component {
   }
   
   onSubmit = (url) => {
+    // clear state
+    this.setState({
+      characterData: ''
+    })
+
     fetch(url)
     .then(this.handleErrors)
     .then(json => {
+      // Log data to view:
       // console.log("ok", json)
       this.setState({
         characterData: json
       })
     } )
     .catch(error => {
-      console.log(error);
+      // Log error to view:
+      // console.log(error);
     });
   }
 
