@@ -1,14 +1,10 @@
 import React, {Component} from 'react'
-// import Link from "next/link";
 import Header from "../components/header";
 import Character from "../components/Character";
-
 import { characters } from '../src/characters.json';
 import Movie from "../components/Movie";
-import MovieList from "../components/MovieList";
 import fetch from "isomorphic-fetch"
 import Router from 'next/router'
-// import SwLogo from '../components/SwLogo';
 import "tachyons/css/tachyons.css";
 
 export default class extends Component {
@@ -42,7 +38,6 @@ export default class extends Component {
     return (
 
       <main className="bg-black gray ">
-
         
         <Header />
       
@@ -56,27 +51,32 @@ export default class extends Component {
         }
         </div>
 
-
         {/* CHARACTER FILMS */}
-        {
-          this.state.characterData
+        <div className="films-container avenir blue flex flex-column items-center">
+          
+          {
+            this.state.characterData
           ?
-          this.state.characterData.films.map((item, index)=>(
-            <Movie key={index} titleURL={item} />
-          ))
+            this.state.characterData.films.map((item, index)=>(
+              <div key={index} className="tc">
+              <p className="white">{this.state.characterData.name} appeared in:</p>
+              <div  className="film-wrapper b--red">
+                <Movie titleURL={item} />
+              </div>
+              </div>
+            ))
           :
-          null
-        }
+            null
+          }
+
+        </div>
+
       <style jsx>{`
-        html, body{
-          background: red;
-        }
         main{
           height: 100vh;
         }
     `}</style>
       </main>
     )
-
   }
 };

@@ -34,17 +34,13 @@ export default function SwLogo(){
   
   } }
 @keyframes fadeIn { from {
-  opacity:0;
+  opacity:.2;
   transform: scale(.5);
 } to {
   opacity:1;
   transform: scale(1)
-  } }
-
-{/* @-webkit-keyframes scaleIn { from { transform: scale(.5); } to { transform: scale(1) } }
-@-moz-keyframes    scaleIn { from { transform: scale(.5); } to { transform: scale(1) } }
-@keyframes         scaleIn { from { transform: scale(.5); } to { transform: scale(1) } } */}
-
+  }
+}
 
 
 .fade-in {
@@ -54,7 +50,7 @@ export default function SwLogo(){
  -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value */
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
 

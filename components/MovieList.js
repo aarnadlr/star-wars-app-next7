@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 export default class MovieList extends Component {
   state = {
-
   }
 
   componentDidMount(){
@@ -14,7 +13,6 @@ export default class MovieList extends Component {
           movieData: json
         })
       })
-    
   }
   render() {
     return (

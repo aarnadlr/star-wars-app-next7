@@ -2,29 +2,20 @@ import React from 'react'
 import "tachyons/css/tachyons.css";
 import Router from 'next/router'
 
-
 export default function Error() {
-
   return (
     <div className="avenir bg-black flex flex-column items-center justify-center">
-
 
         <h2 className="white mb0 f4 ttu" >Error</h2>
 
         <div className="wrapper-404 flex items-center justify-center">
 
-          
           <h1 className=" tc f1 fw8">4</h1>
           
           <img src="./static/death-star.jpg" alt="death-star" />
-
-        
           <h1 className=" tc f1 fw8">4</h1>
 
         </div>
-          
-
-
         <p className="silver ma0 tc f4 fw3">
             I find your lack of navigation disturbing.
         </p>
@@ -57,7 +48,6 @@ export default function Error() {
             transform: scale(1.06)
           }
         `}</style>
-
     </div>
   )
 }
