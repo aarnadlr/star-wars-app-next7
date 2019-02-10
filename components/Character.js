@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Character(props) {
   return (
-    <button onClick={props.onSubmit}>
+    <button className="br3 bg-black b--blue blue" onClick={props.onSubmit}>
       {props.name}
       <style jsx>{`
         button{
@@ -15,8 +15,12 @@ export default function Character(props) {
           transition: all .3s ease;
         }
         button:hover{
-          background: tomato;
+          background: black;
           color: white;
+          transform: scale(1.06);
+        }
+        button:not(:last-of-type){
+          margin-right: 16px;
         }
       `}</style>
     </button>

@@ -47,7 +47,7 @@ export default class extends Component {
         <Header />
       
         {/* CHARACTER BUTTONS */}
-        <div className="flex mt4 pa4">
+        <div className="avenir flex mt4 pa4 justify-center">
         {
           characters.map((item, index) => (
             
@@ -68,7 +68,12 @@ export default class extends Component {
           null
         }
       <style jsx>{`
-        
+        html, body{
+          background: red;
+        }
+        main{
+          height: 100vh;
+        }
     `}</style>
       </main>
     )
