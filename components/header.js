@@ -1,5 +1,6 @@
 export default () => (
   <header>
-    <h1>Static Next.js Example on Now 2.0</h1>
+    <h1>Star Wars</h1>
+    <h3>Choose a character below:</h3>
   </header>
 )
