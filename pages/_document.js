@@ -10,6 +10,7 @@ export default class MyDocument extends Document {
     return (
       <html className="bg-black">
         <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
           <style>{`body { margin: 0 }`}</style>
         </Head>

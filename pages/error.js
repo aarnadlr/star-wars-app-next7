@@ -16,7 +16,7 @@ export default function Error() {
           <h1 className=" tc f1 fw8">4</h1>
 
         </div>
-        <p className="silver ma0 tc f4 fw3">
+        <p className="silver ma0 tc f4 fw4">
             I find your lack of navigation disturbing.
         </p>
 
