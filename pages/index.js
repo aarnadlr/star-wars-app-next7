@@ -47,11 +47,15 @@ export default class extends Component {
         <Header />
       
         {/* CHARACTER BUTTONS */}
+        <div className="flex mt4 pa4">
         {
           characters.map((item, index) => (
+            
             <Character key={index} name={item.name} onSubmit={()=>this.onSubmit(item.url)} />
           ))
         }
+        </div>
+
 
         {/* CHARACTER FILMS */}
         {
